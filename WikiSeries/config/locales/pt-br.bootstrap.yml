@@ -16,7 +16,7 @@ pt-BR:
       destroy: "Deletar"
       new: "Novo Usuário"
       edit: "Editar"
-      create user: "Criar Usuário"
+      show: "Ver Perfil"
     titles:
       edit: "Editar %{model}"
       save: "Salvar %{model}"

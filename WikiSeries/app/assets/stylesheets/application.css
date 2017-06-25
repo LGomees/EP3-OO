@@ -13,3 +13,29 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+   width: auto;
+   background-image: url("/backmovie.jpg");
+ }
+
+ footer {
+   text-align: center;
+ }
+
+footer p {
+  color: white;
+}
+
+a {
+  color: #000;
+
+  &:visited {
+    color: #666;
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}

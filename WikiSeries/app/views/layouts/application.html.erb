@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title><%= content_for?(:title) ? yield(:title) : "WikiSeries" %></title>
     <%= csrf_meta_tags %>
 
@@ -39,14 +41,27 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/users">WikiSeries</a>
+         <a class="navbar-brand" href="/users">WikiSeries</a>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
-            <li><%= link_to "Cadastrar", new_user_path  %></li>
-            <li><%= link_to "Categorias", "/path2"  %></li>
-            <li><%= link_to "Contato", "/path3"  %></li>
+            <li class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Categorias
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a href="#">Ação</a></li>
+                <li><a href="#">Terror</a></li>
+                <li><a href="#">Ficção Científica</a></li>
+              </ul>
+            </li>
           </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+	            <li><%= link_to "Entrar", new_user_path %></li>
+              <li><%= link_to "Cadastrar", new_user_path %></li>
+	        </ul>
+
         </div>
       </div>
     </div>
@@ -58,11 +73,6 @@
           <%= yield %>
         </div>
       </div><!--/row-->
-
-      <footer>
-        <p>&copy; Company 2017</p>
-      </footer>
-
     </div> <!-- /container -->
 
   </body>
