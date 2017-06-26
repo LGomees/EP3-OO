@@ -14,9 +14,14 @@
  *= require_self
  */
 
+#series {
+  font-size: 15px;
+}
+
  body {
    width: auto;
-   background-image: url("/backmovie.jpg");
+   background-image: url("backmovie.jpg");
+   background-size: 100%;
  }
 
  footer {

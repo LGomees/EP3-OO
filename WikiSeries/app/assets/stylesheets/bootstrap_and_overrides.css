@@ -5,6 +5,10 @@
   =require twitter-bootstrap-static/sprites
 */
 
+.btn-primary {
+  color: #fff;
+}
+
 .dropdown-toggle {
   margin-top: 10px;
   background-color: inherit;

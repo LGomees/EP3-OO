@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :series
   root 'home#index'
   resources :users
   get 'home' => 'home#index'
