@@ -2,6 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-td {
-  color: white;
+.backview {
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  background-image: url("backmovie.jpg");
+  width: 1150px;
+  height: 430px;
+  border-radius: 20px;
 }
