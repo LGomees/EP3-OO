@@ -2,6 +2,7 @@ pt-BR:
   activerecord:
     models:
       user: Usuário
+      series: Séries
     attributes:
       user:
         id: "Id"
@@ -9,3 +10,8 @@ pt-BR:
         email: "Email"
         password: "Senha"
         created_at: "Criado em"
+      series:
+        name: "Nome"
+        creator: "Criador"
+        gender: "Gênero"
+        year: "Ano"

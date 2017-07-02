@@ -1,5 +1,4 @@
 <%- model_class = Series -%>
-<%if policy(@series).index?%>
 <div class="backPages">
   <div class="backInside">
 <%- model_class = Series -%>
@@ -12,21 +11,20 @@
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:name) %></th>
       <th><%= model_class.human_attribute_name(:creator) %></th>
-      <th><%= model_class.human_attribute_name(:category) %></th>
       <th><%= model_class.human_attribute_name(:year) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%= model_class.human_attribute_name(:gender) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
+    <% if policy(@series).index?%>
     <% @series.each do |series| %>
       <tr>
         <td><%= link_to series.id, series_path(series) %></td>
         <td><%= series.name %></td>
         <td><%= series.creator %></td>
-        <td><%= series.category %></td>
         <td><%= series.year %></td>
-        <td><%= series.created_at %></td>
+        <td><%= series.gender %></td>
         <td>
           <%= link_to t('.show', :default => t("helpers.links.show")),
                       series_path(series), :class => 'btn btn-default btn-xs' %>
@@ -39,7 +37,7 @@
                       :class => 'btn btn-xs btn-danger' %>
         </td>
       </tr>
-    <% end %>
+        <% end %>
   </tbody>
 </table>
 
@@ -48,42 +46,5 @@
             :class => 'btn btn-primary' %>
   </div>
 </div>
-<%else%>
-<div class="backPages">
-  <div class="backInside">
-<%- model_class = Series -%>
-<div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
-</div>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:creator) %></th>
-      <th><%= model_class.human_attribute_name(:category) %></th>
-      <th><%= model_class.human_attribute_name(:year) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @series.each do |series| %>
-      <tr>
-        <td><%= link_to series.id, series_path(series) %></td>
-        <td><%= series.name %></td>
-        <td><%= series.creator %></td>
-        <td><%= series.category %></td>
-        <td><%= series.year %></td>
-        <td><%= series.created_at %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_series_path,
-            :class => 'btn btn-primary' %>
-  </div>
-</div>
 <%end%>
