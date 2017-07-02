@@ -1,3 +1,5 @@
+<div class="backPages">
+  <div class="backInside">
 <%- model_class = Series -%>
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
@@ -22,7 +24,7 @@
         <td><%= series.creator %></td>
         <td><%= series.category %></td>
         <td><%= series.year %></td>
-        <td><%=l series.created_at %></td>
+        <td><%= series.created_at %></td>
         <td>
           <%= link_to t('.show', :default => t("helpers.links.show")),
                       series_path(series), :class => 'btn btn-default btn-xs' %>
@@ -42,3 +44,5 @@
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_series_path,
             :class => 'btn btn-primary' %>
+  </div>
+</div>

@@ -1,7 +1,8 @@
-<h2>Sign up</h2>
+<div class="backPages">
+  <div class="backInside">
+    <h2>Cadastrar</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
 
   <div class="field">
     <%= f.label :email %><br />
@@ -11,7 +12,7 @@
   <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <em>(mínimo de <%= @minimum_password_length %> caracteres)</em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
@@ -22,8 +23,10 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Cadastrar" %>
   </div>
 <% end %>
 
 <%= render "users/shared/links" %>
+  </div>
+</div>

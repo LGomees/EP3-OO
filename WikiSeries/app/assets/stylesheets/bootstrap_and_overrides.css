@@ -26,19 +26,32 @@
 
 .navbar-center {
   margin-top: 10px;
-  margin-left: 350px;
-  background-image: url("wiki.png");
-  width: 100px;
-  height: 30px;
+  margin-left: 322px;
+  background-image: url("wikiseries.png");
+  width: 144px;
+  height: 34px;
+}
+
+.navbar-center-out {
+  margin-top: 10px;
+  margin-left: 390px;
+  background-image: url("wikiseries.png");
+  width: 144px;
+  height: 34px;
 }
 
 .navbar-default .navbar-brand {
   color: #ecf0f1;
 }
 
+#emailName {
+  margin-top: 15px;
+  margin-right: 80px;
+}
 .navbar-right {
   text-align: right;
 }
+
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
   color: #ecdbff;

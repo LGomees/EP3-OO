@@ -51,9 +51,9 @@
               <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Categorias
               <span class="caret"></span></button>
               <ul class="dropdown-menu">
-                <li><a href="#">Ação</a></li>
-                <li><a href="#">Terror</a></li>
-                <li><a href="#">Ficção Científica</a></li>
+                <li><a href="/series">Ação</a></li>
+                <li><a href="/series">Terror</a></li>
+                <li><a href="/series">Ficção Científica</a></li>
               </ul>
             </li>
           </ul>
@@ -66,13 +66,15 @@
             <ul class="nav navbar-nav navbar-center"></ul>
           </a>
 
-          <ul class="nav navbar-nav navbar-right">            
+          <ul class="nav navbar-nav navbar-right">
             <li><%= link_to "Sair", destroy_user_session_path, method: :delete %></li>
 	        </ul>
 
+          <div id="emailName">
           <ul class="nav navbar-nav navbar-right">
-            <li><%= current_user.email %></li>
+            <a href="/users/edit"><li><%= current_user.email %></li></a>
 	        </ul>
+        </div>
 
 
         </div>
@@ -108,25 +110,21 @@
               <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Categorias
               <span class="caret"></span></button>
               <ul class="dropdown-menu">
-                <li><a href="#">Ação</a></li>
-                <li><a href="#">Terror</a></li>
-                <li><a href="#">Ficção Científica</a></li>
+                <li><a href="/series">Ação</a></li>
+                <li><a href="/series">Terror</a></li>
+                <li><a href="/series">Ficção Científica</a></li>
               </ul>
             </li>
           </ul>
 
-          <ul class="nav navbar-nav navbar">
-	            <li><%= link_to "Séries", new_series_path %></li>
-	        </ul>
-
-          <a href="/home">
-            <ul class="nav navbar-nav navbar-center"></ul>
-          </a>
+            <a href="/home">
+            <ul class="nav navbar-nav navbar-center-out"></ul>
+            </a>
 
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to "Entrar", new_user_session_path %></li>
             <li><%= link_to "Cadastrar", new_user_registration_path %></li>
-            <li><%= link_to "Sair", destroy_user_session_path, method: :delete %></li>
+
 	        </ul>
 
         </div>

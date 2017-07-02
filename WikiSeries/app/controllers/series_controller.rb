@@ -2,6 +2,7 @@ class SeriesController < ApplicationController
   before_action :set_series, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
+
   # GET /series
   # GET /series.json
   def index
