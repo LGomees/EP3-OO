@@ -1,0 +1,55 @@
+<%= form_for @series, :html => { :class => "form-horizontal series" , multipart: true} do |f| %>
+
+<% if @series.errors.any? %>
+  <div id="error_expl" class="panel panel-danger">
+    <div class="panel-heading">
+      <h3 class="panel-title"><%= pluralize(@series.errors.count, "Espaço(os) em branco") %></h3>
+    </div>
+  </div>
+<% end %>
+
+  <div class="form-group">
+    <%= f.label :name, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :name, :class => 'form-control' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :image, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.file_field :image %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :creator, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :creator, :class => 'form-control' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label "Gender", :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.select :gender,['Ação','Terror','Ficção Científica','Romance','Comédia'] %>
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <%= f.label :year, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :year, :class => 'form-control' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit 'Editar Série', :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                series_index_path, :class => 'btn btn-default' %>
+    </div>
+  </div>
+
+<% end %>

@@ -2,11 +2,13 @@
   <div class="backInside">
 <%- model_class = Series -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+  <h1><%= @series.name %> </h1>
 </div>
 
 <dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+
+  <div id="image"<dd><%= image_tag @series.image.url %></dd></div>
+  <div id="descriptions"><dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
   <dd><%= @series.name %></dd>
   <dt><strong><%= model_class.human_attribute_name(:creator) %>:</strong></dt>
   <dd><%= @series.creator %></dd>
@@ -14,8 +16,10 @@
   <dd><%= @series.gender %></dd>
   <dt><strong><%= model_class.human_attribute_name(:year) %>:</strong></dt>
   <dd><%= @series.year %></dd>
+</div>
 </dl>
 
+<div id="buttonShow">
 <%= link_to t('.back', :default => t("helpers.links.back")),
               series_index_path, :class => 'btn btn-default'  %>
 <%if current_user.present?%>
@@ -27,6 +31,7 @@
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Você tem certeza?')) },
               :class => 'btn btn-danger' %>
+</div>
 <%end%>
 <%end%>
   </div>

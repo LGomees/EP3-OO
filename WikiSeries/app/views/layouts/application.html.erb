@@ -58,6 +58,8 @@
             <li><%= link_to "Sair", destroy_user_session_path, method: :delete %></li>
 	        </ul>
 
+          
+
           <div id="emailName">
           <ul class="nav navbar-nav navbar-right">
             <a href="/users/edit"><li><%= current_user.email %></li></a>
@@ -97,7 +99,7 @@
           <ul class="nav navbar-nav navbar">
               <li><%= link_to "Séries", series_index_path %></li>
           </ul>
-          
+
             <a href="/home">
             <ul class="nav navbar-nav navbar-center-out"></ul>
             </a>
