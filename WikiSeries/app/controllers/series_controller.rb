@@ -6,7 +6,8 @@ class SeriesController < ApplicationController
   # GET /series
   # GET /series.json
   def index
-    @series = Series.all
+    @q = Series.ransack(params[:q])
+    @series = @q.result
   end
 
   # GET /series/1
