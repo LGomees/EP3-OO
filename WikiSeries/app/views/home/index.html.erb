@@ -2,6 +2,21 @@
   <div class="conteiner2">
     <div class="textconteiner2">
 
+
+      <div class="row">
+        <% @series.each do |serie|%>
+        <div class="col-xs-6 col-md-3">
+          <a href="<%= series_path serie %>" class="thumbnail">
+            <%= image_tag serie.image.url%>
+            <div class="caption">
+              <h3><%=serie.name%></h3>
+            </div>
+          </a>
+        </div>
+        <%end%>
+      </div>
+
+
     </div>
   </div>
 </div>

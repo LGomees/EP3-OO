@@ -1,13 +1,21 @@
 class SeriesController < ApplicationController
+  before_action :not_user, except: [:index, :show]
   before_action :set_series, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
-
+  before_action :not_admin, only: [:destroy]
 
   # GET /series
   # GET /series.json
   def index
     @q = Series.ransack(params[:q])
     @series = @q.result
+  end
+
+  def not_admin
+      redirect_to series_path unless current_user.admin?
+  end
+
+  def not_user
+      redirect_to root_path if current_user.blank?
   end
 
   # GET /series/1
@@ -72,6 +80,7 @@ class SeriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def series_params
-      params.require(:series).permit(:name, :creator, :gender, :year)
+      params.require(:series).permit(:name, :creator, :gender, :year, :image)
     end
+
 end

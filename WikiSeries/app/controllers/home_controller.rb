@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
-  def index    
+  def index
+    @series = Series.limit(4).order("RANDOM()")
   end
 end
