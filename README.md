@@ -16,7 +16,7 @@ Diversas classes e diversos métodos foram criados. Explicar cada um é pouco in
 
 Não foi criado nenhum método especial para as models, foram utilizados os já disponíveis no ActiveRecord.
 
-* Series: administradores, têm acesso a todo o sistema, pode excluir vendedores, excluir pedidos, excluir clientes e outros admins.
+* Series: administradores, têm acesso a todo o sistema, podendo excluir séries.
 
 * Users: Vendedores possuem um painel, através do qual poderão gerenciar os pedidos recebidos por sua loja.
 
