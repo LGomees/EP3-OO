@@ -9,7 +9,7 @@ Wikiseries é uma especie de wikipedia de series em que os usuarios podem visual
 
 Diversas classes e diversos métodos foram criados. Explicar cada um é pouco intuitivo, já que a maioria são actions de controllers. O importante é entender a organização da estrutura do banco de dados.
 
-![diagrama](/Documentos/exemplooo.png)
+![diagrama](http://imgur.com/a/ikxPQ)
 
 
 # Models
