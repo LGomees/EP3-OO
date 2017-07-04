@@ -1,9 +1,11 @@
 Exercício de programação 3 para a turma de OO do segundo semestre da UNB-FGA
 Desenvolvido por: João Vitor Ramos de Souza e Lucas Gomes de Oliveira
 
+Link para vídeo do youtube: https://goo.gl/2U8cZL 
+
 # Wikiseries
 
-Wikiseries é uma especie de wikipedia de series em que os usuarios podem visualizar series e edita-las, porem para conseguir realizar a ediçao de series o usuario deve estar cadastrado no site
+Wikiseries é uma espécie de wikipedia de series em que os usuarios podem visualizar séries e editá-las, porem para conseguir realizar a edição de series o usuario deve estar cadastrado no site.
 
 # Classes
 
@@ -18,7 +20,7 @@ Não foi criado nenhum método especial para as models, foram utilizados os já 
 
 * Series: administradores, têm acesso a todo o sistema, podendo excluir séries.
 
-* Users: Vendedores possuem um painel, através do qual poderão gerenciar os pedidos recebidos por sua loja.
+* Users: Usuários possuem a permissão para editar as informações das séries e criar novas séries.
 
 # Controllers
 
@@ -39,7 +41,10 @@ Não foi criado nenhum método especial para as models, foram utilizados os já 
  - series_params: define os parametros da série
  
  
-* User: Utilizada para as páginas do painel do vendedor (login como vendedor obritatório).
+* User: Utilizada para cadastro de usuários e controle dos níveis de acesso do site  
+Usuário Cadastrado: EDITAR e CRIAR SÉRIE 
+Usuário Admin: TODAS AS FUNCIONALIDADES, incluindo DELETAR  
+Usuário Não-Cadastrado: Apenas visualizar as séries. 
  - index: utiliza o método User.all para listar todos usuários;
  - show: busca um usuário por seu respectivo id.
  - new: instancia uma nova serie;
@@ -53,7 +58,7 @@ Não foi criado nenhum método especial para as models, foram utilizados os já 
  
 # Devise - Controllers
 
-Além das citadas acima, alguns métodos da gem devise foram sobrecarregados para adequação ao projeto.
+Além das citadas acima, alguns métodos da gem devise das seguintes classes  foram sobrecarregados para adequação ao projeto.
 * users/registrations_controller
 * users/sessions_controller
 * users/passwords_controller
@@ -82,6 +87,12 @@ rake db:migrate
 ```
 
 # Utilizando
+
+
+-Suba o servidor pelo comando
+```
+rails s
+```
 
 Crie um usuário normal
 ```
