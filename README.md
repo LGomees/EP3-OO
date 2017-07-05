@@ -65,6 +65,7 @@ Além das citadas acima, alguns métodos da gem devise das seguintes classes  fo
  
 # Rodando
 
+O projeto foi feito em distriuições do ubuntu versão 14.04 LTS e utilizou a versão 5.1.1 do rails e a versão 2.3.1p112 do ruby. Para correto funcionamento a máquina de testes deve possuir essas versões de ruby e rails além da instalação da gem paperclip citada abaixo.
 Antes de iniciar, é necessário instalar a gem paperclip utilizada na adição das imagens das séries, pelo seguinte comando.
 
 ```sudo apt-get install imagemagick -y```
